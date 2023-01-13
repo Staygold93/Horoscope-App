@@ -1,16 +1,14 @@
 const User = require('./User');
-const userSigns = require('./userSigns');
+const userSign = require('./userSign');
 
-User.hasMany(userSigns , {
+
+
+userSign.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-userSigns.belongsTo(User, {
-  foreignKey: 'user_id'
-});
-
-module.exports = { User, userSigns };
+module.exports = { User, userSign };
 
 
 
