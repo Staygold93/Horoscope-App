@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { userSign } = require('../../models');
 const { User } = require('../models');
 
 router.post('/', async (req, res) => {
@@ -59,3 +60,12 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+
+
+// router.post ('/', (req, res) => {
+//   userSign.create ({
+//     sign: req.body.sign,
+//     element: req.body.element
+//   })
+//     .then((newUser))
+// })
