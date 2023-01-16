@@ -1,6 +1,6 @@
 const { Horoscope } = require("../../models");
 
-const router = reuqire('express').Router();
+const router = require('express').Router();
 
 
 router.get('/', (req, res) => {
