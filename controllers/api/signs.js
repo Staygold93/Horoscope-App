@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//Zodiac sign, element of that sign, date range of the sign, possibly the personality of the sign
 
 router.post('/', (req, res) => {
     signs.bulkcreate(req.body)

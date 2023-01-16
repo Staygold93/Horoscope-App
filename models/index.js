@@ -1,14 +1,19 @@
 const User = require('./User');
-const userSign = require('./userSign');
+const Horoscope = require('./Horoscope');
 
 
 
-userSign.belongsTo(User, {
+Horoscope.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-module.exports = { User, userSign };
+
+User.hasOne(Horoscope, {
+  foreignKey: 'user_id',
+});
+
+module.exports = { User, Horoscope };
 
 
 
