@@ -11,6 +11,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+     // select * from horoscope where id=id;
+
 let horoscope = Horoscope.findByPk({
         where: {
             id: req.params.id,
@@ -19,6 +21,9 @@ let horoscope = Horoscope.findByPk({
     console.log(horoscope);
 });
 
+router.post('/', (req, res) => {
+    // create new horoscope item
+})
 //Zodiac sign, element of that sign, date range of the sign, possibly the personality of the sign
 
 // router.post('/', (req, res) => {
