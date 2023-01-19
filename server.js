@@ -1,13 +1,46 @@
 const path = require('path');
-const express = require("express")
+const express = require('express');
+const session = require('express-session');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
-const { Router } = require('express');
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const bodyParser = require("body-parser");
 
 
 const app = express();
+const PORT = process.env.PORT || 3001;
+var db = require("./models");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
 
 const hbs = exphbs.create({});
+// .sync()
+// .then((result) => {
+//   console.log(result);
+// })
+// .catch((err) => {
+//   console.log(err);
+// });
+
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -16,9 +49,10 @@ app.set('views', './views');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/', async (req, res) => {
-    res.render('login');
+app.use(require('./controllers/homeRoutes'));
+app.use('/api/', require('./controllers/login'));
+app.use('/auth', require('./routes/auth'));
+app.use('/', require('./routes/pages'));
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
-
-app.listen(3001);

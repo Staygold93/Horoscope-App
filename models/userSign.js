@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, ENUM } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
@@ -16,6 +16,12 @@ userSign.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+
+    birthday: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      status: ENUM,
+    }
   
     },
   
