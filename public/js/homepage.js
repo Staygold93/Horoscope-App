@@ -29,3 +29,45 @@ function showHoroscopeDetails(response,zodaicSign){
     let description = document.getElementById('description');
     description.innerText = `${response.description}`;
 }
+
+/ function to change the image based of of Zodiac Sign
+function changeImage(zodaicSign){
+    let zodiacPic = document.getElementById('zodaicPic'); 
+    
+    if (zodaicSign=='aries'){
+      zodiacPic.setAttribute("src",`./images/constellations/aries.jpg`);
+    }
+    else if(zodaicSign=='taurus'){
+          zodiacPic.setAttribute("src",`./images/constellations/taurus.jpg`);
+    }
+    else if(zodaicSign=='gemini'){
+          zodiacPic.setAttribute("src",`./images/constellations/gemini.jpg`);
+    }
+    else if(zodaicSign=='cancer'){
+          zodiacPic.setAttribute("src",`./images/constellations/cancer.jpg`);
+    }
+    else if(zodaicSign=='leo'){
+          zodiacPic.setAttribute("src",`./images/constellations/leo.jpg`);
+    }
+    else if(zodaicSign=='virgo'){
+          zodiacPic.setAttribute("src",`./images/constellations/virgo.jpg`);
+    }
+    else if(zodaicSign=='libra'){
+          zodiacPic.setAttribute("src",`./images/constellations/libra.jpg`);
+    }
+    else if(zodaicSign=='scorpio'){
+          zodiacPic.setAttribute("src",`./images/constellations/scorpio.jpg`);
+    }
+    else if(zodaicSign=='sagittarius'){
+          zodiacPic.setAttribute("src",`./images/constellations/sagittarius.jpg`);
+    }
+    else if(zodaicSign=='capricorn'){
+          zodiacPic.setAttribute("src",`./images/constellations/capricorn.jpg`);
+    }
+    else if(zodaicSign=='aquarius'){
+          zodiacPic.setAttribute("src",`./images/constellations/aquarius.jpg`);
+    }
+    else {
+          zodiacPic.setAttribute("src",`./images/constellations/pisces.jpg`);
+    }
+}
