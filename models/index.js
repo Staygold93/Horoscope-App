@@ -1,5 +1,8 @@
+const {Sequelize} = require('../config/connection');
 const User = require('./User');
 const userSign = require('./userSign');
+
+
 
 
 
