@@ -103,3 +103,24 @@ a:hover {
     color: whitesmoke;
 }
 
+*modal */
+ul{
+    list-style: none;
+  }
+  li{
+    color: #fff;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  li span{
+    color: black;
+    font-style: italic;
+    font-variant: small-caps;
+  }
+  #modal{
+   background-color: rgba(245, 245, 245, 0.4) !important;
+   height: auto;
+   width: auto;
+   display: none;
+  }
+
