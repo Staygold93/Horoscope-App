@@ -1,3 +1,9 @@
+// function to select a zodiac card 
+function selectCard(zodiacSign){
+    horoscopeDetials(zodiacSign);
+    changeImage(zodiacSign);
+}
+
 // fetching API data function 
 function horoscopeDetials(zodiacSign){
     const URL ="https://aztro.sameerkumar.website/";
@@ -30,7 +36,7 @@ function showHoroscopeDetails(response,zodaicSign){
     description.innerText = `${response.description}`;
 }
 
-/ function to change the image based of of Zodiac Sign
+// / function to change the image based of of Zodiac Sign
 function changeImage(zodaicSign){
     let zodiacPic = document.getElementById('zodaicPic'); 
     
