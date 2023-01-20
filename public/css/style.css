@@ -74,3 +74,32 @@ a:hover {
 
 }
 
+#main .col img{
+    width: 200px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px 5px  rgba(161, 122, 149, 0.699);
+
+}
+
+#main .col img:hover{
+    transform:scale(1.1);
+    transition: .5s ease-in ;
+  }
+
+#main .col h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: relative;
+    color: transparent;
+    background-position: center;
+    -webkit-background-clip:text;
+    -moz-background-clip: text;
+    -ms-background-clip:text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    color: whitesmoke;
+}
+
