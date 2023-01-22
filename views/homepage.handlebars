@@ -1,2 +1,148 @@
-<h1> this is a homepage</h1>
-<p>Hello {{ user.name }}!</p>
+<link rel="stylesheet" href="/css/homepage.css">
+<!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+
+<main id="main">
+    <div class="heading text-center " data-aos="zoom-out" data-aos-duration="2000">
+        <div>
+            <h1>Welcome, {{user.name}}</h1>
+            <br>
+            <h2>Your New Daily Horoscope is Waiting</h2>
+        </div>
+        <br>
+        <div>
+            <button id="logout"><a href="http://localhost:3001/">Logout</a></button>
+        </div>
+        <br>
+        <div>
+            <h2>Select Your Zodaic Sign</h2>
+        </div>
+
+        <div class="container">
+            <!--row 1-->
+            <div class="row py-1">
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="1000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("aries")'>
+                        <img src="/images/zodiac/Aries.jpeg" alt="aries sign">
+                    </a>
+                    <h3 class='text-center'>Aries</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="2000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("taurus")'>
+                        <img src="/images/zodiac/Taurus.jpeg" alt="taurus sign">
+                    </a>
+                    <h3 class='text-center'>Taurus</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="3000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("gemini")'>
+                        <img src="/images/zodiac/Gemini.jpeg" alt="gemini sign">
+                    </a>
+                    <h3 class='text-center'>Gemini</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="3000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("cancer")'>
+                        <img src="/images/zodiac/Cancer.jpeg" alt="cancer sign">
+                    </a>
+                    <h3 class='text-center'>Cancer</h3>
+                </div>
+
+            </div>
+
+            <!--row 2-->
+            <div class="row py-1">
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="3000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("leo")'>
+                        <img src="/images/zodiac/Leo.jpeg" alt="leo sign">
+                    </a>
+                    <h3 class='text-center'>Leo</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="3000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("virgo")'>
+                        <img src="/images/zodiac/Virgo.jpeg" alt="virgo sign">
+                    </a>
+                    <h3 class='text-center'>Virgo</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="2000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("libra")'>
+                        <img src="/images/zodiac/Libra.jpeg" alt="libra sign">
+                    </a>
+                    <h3 class='text-center'>Libra</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="1000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("scorpio")'>
+                        <img src="/images/zodiac/Scorpio.jpeg" alt="scorpio sign">
+                    </a>
+                    <h3 class='text-center'>Scorpio</h3>
+                </div>
+
+            </div>
+
+            <!--row 3-->
+            <div class="row py-1">
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="1000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("sagittarius")'>
+                        <img src="/images/zodiac/Sagittarius.jpeg" alt="sagittarius sign">
+                    </a>
+                    <h3 class='text-center'>Sagittarius</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="2000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("capricorn")'>
+                        <img src="/images/zodiac/Capricorn.jpeg" alt="capricorn sign">
+                    </a>
+                    <h3 class='text-center'>Capricorn</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="3000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("aquarius")'>
+                        <img src="/images/zodiac/Aquarius.jpeg" alt="aquarius sign">
+                    </a>
+                    <h3 class='text-center'>Aquarius</h3>
+                </div>
+
+                <div class="col text-center" id="card" data-aos='zoom-in' data-aos-duration="3000">
+                    <a href="#modal" rel="modal:open" onclick='selectCard("pisces")'>
+                        <img src="/images/zodiac/Pisces.jpeg" alt="pisces sign">
+                    </a>
+                    <h3 class='text-center'>Pisces</h3>
+                </div>
+
+            </div>
+
+</main>
+
+<script src="/js/homepage.js"></script>
+
+  <div id="modal" class="modal">
+    <div class="container">
+      <div class="row justify-content-center">
+        <img src="" width='150' class="img-fulid" id='zodaicPic'>
+      </div>
+      <hr style="border:1px solid black; background-color:black;">
+      <div class="row">
+        <ul>
+          <li>Date : <span id='current_date'></span></li>
+          <li>Lucky Time : <span id='lucky_time'></span></li>
+          <li>Lucky Number : <span id='lucky_number'></span></li>
+          <li>Color : <span id='color'></span></li>
+          <li>Mood : <span id='mood'></span></li>
+          <li>Description : <span id='description'></span></li>
+        </ul>
+      </div>
+      <hr style="border:1px solid black; background-color:black;" width="50%">
+    </div>
