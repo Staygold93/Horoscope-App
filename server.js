@@ -44,11 +44,13 @@ app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
 app.set('views', './views');
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(require('./controllers/homeRoutes'));
 app.use('/api/', require('./controllers/login'));
 app.use('/auth', require('./routes/auth'));
