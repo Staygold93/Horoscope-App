@@ -15,7 +15,7 @@ function horoscopeDetials(zodiacSign){
 }
 
 // function to render the API data into the modal 
-function showHoroscopeDetails(response,zodaicSign){
+function showHoroscopeDetails(response,zodiacSign){
     let current_date = document.getElementById('current_date');
     let today = new Date().toString().split(' ').splice(1,3).join(' ');
     current_date.innerText = today;
