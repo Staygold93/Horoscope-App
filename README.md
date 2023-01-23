@@ -23,7 +23,7 @@ when a user is created upon login/signup page.
 * Github - lisaelizardo
 
 * Floyd Hudson -
-  Github - Fleauxxx
+* Github - Fleauxxx
 
 * Aldo Perez - 
-  Github - Staygold93
+* Github - Staygold93
