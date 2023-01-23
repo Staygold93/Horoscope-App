@@ -7,7 +7,8 @@ As a person whos interested in astrological data i would like to acces a horosco
 ## Description
 A simple node js app that allows the user to view their Horoscope data while using a mySQL database
 when a user is created upon login/signup page. 
-## Usage
+## Installation
+ * npm start ,
 
 
 
