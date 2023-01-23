@@ -20,10 +20,10 @@ when a user is created upon login/signup page.
 
 ## Developers
 * Alissa Elizardo - 
-* Github - lisaelizardo
+ Github - lisaelizardo
 
 * Floyd Hudson -
-* Github - Fleauxxx
+ Github - Fleauxxx
 
 * Aldo Perez - 
-* Github - Staygold93
+ Github - Staygold93
