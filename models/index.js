@@ -1,5 +1,5 @@
 const {Sequelize} = require('../config/connection');
-const User = require('./User');
+const User = require('./user');
 const userSign = require('./userSign');
 
 
