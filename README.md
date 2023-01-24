@@ -25,7 +25,7 @@ when a user is created upon login/signup page.
 
 
 
-## Screenshots
+## Demo Screenshots
 
 ![image](https://user-images.githubusercontent.com/112224915/214147814-62317485-8cb7-4bab-8397-a3d824eaafc5.png)
 
