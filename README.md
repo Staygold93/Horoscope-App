@@ -32,6 +32,8 @@ when a user is created upon login/signup page.
 
 ![image](https://user-images.githubusercontent.com/112224915/213949553-f5917dd0-bfc5-4ed6-a8d2-265224737a9f.png)
 
+![image](https://user-images.githubusercontent.com/112224915/214198478-e1018443-00a0-4992-830f-3c685800f619.png)
+
 ## Developers
 * Alissa Elizardo - 
  Github - lisaelizardo
