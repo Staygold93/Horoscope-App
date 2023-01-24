@@ -23,7 +23,7 @@ exports.register = async (req, res) => {
         res.json({ error: "cannot register user at the moment" })
     })
 
-    if (savedUser) { res.render('login') };
+    if (savedUser) { res.redirect('/login') };
 
 
 }
