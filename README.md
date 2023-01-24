@@ -19,7 +19,7 @@ when a user is created upon login/signup page.
  * Sequelize
  * Express Handlebars
  
- ## Demo Link
+ ## Heroku Demo Link
  https://horoscope-cosmos.herokuapp.com/
  
 
